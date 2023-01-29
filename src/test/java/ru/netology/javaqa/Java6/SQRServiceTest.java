@@ -7,13 +7,12 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 public class SQRServiceTest {
     @ParameterizedTest
-    @CsvFileSource(files="src/test/resources/qsrt.cvs")
+    @CsvFileSource(files = "src/test/resources/qsrt.cvs")
 
-    public void testNumberOfSquares(int expected,int slideStart, int slideEnd){
-        SQRService service=new SQRService();
-        int actual=service.calcSQR(slideStart, slideEnd);
+    public void testNumberOfSquares(int expected, int slideStart, int slideEnd) {
+        SQRService service = new SQRService();
+        int actual = service.calcSQR(slideStart, slideEnd);
 
         Assertions.assertEquals(expected, actual);
     }
-
 }
